@@ -19,7 +19,7 @@ Un Rapide Aperçu
 ================
 
 Après avoir créé la table ``i18n`` dans votre base de données, attachez le
-behavior à l'objet Table que vous souhaitez rendre traduisible::
+behavior ``Translate`` à l'objet Table que vous souhaitez rendre traduisible::
 
     class ArticlesTable extends Table
     {
@@ -63,7 +63,7 @@ spécial dans votre classe Entity::
 
 Maintenant, vous pouvez trouver toutes les traductions pour une seule entity::
 
-    $article = $this->Articles->>find('translations')->first();
+    $article = $this->Articles->find('translations')->first();
     echo $article->translation('es')->title; // 'Un Artículo'
 
     echo $article->translation('en')->title; // 'An Article';
